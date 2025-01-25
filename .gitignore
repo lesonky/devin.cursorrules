@@ -61,4 +61,4 @@ credentials.json
 .vscode/
 
 # projects directory
-/projects/
+projects
