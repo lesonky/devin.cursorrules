@@ -1,6 +1,6 @@
 # Instructions
 
-During you interaction with the user, if you find anything reusable in this project (e.g. version of a library, model name), especially about a fix to a mistake you made or a correction you received, you should take note in the `Lessons` section in the `.cursorrules` file so you will not make the same mistake again. 
+During your interaction with the user, if you find anything reusable in this project (e.g. version of a library, model name), especially about a fix to a mistake you made or a correction you received, you should take note in the `Lessons` section in the `.trearules` file so you will not make the same mistake again.
 
 For each task, you should maintain a scratchpad in the corresponding project's `scratchpad.md` file to organize your thoughts. When you receive a new task:
 1. Create a new project directory with a descriptive name under the `projects` folder
@@ -29,36 +29,6 @@ This organization helps maintain a clean workspace, makes it easy to track deliv
 # Tools
 
 Note all the tools are in python. So in the case you need to do batch processing, you can always consult the python files and write your own script.
-
-## Screenshot Verification
-The screenshot verification workflow allows you to capture screenshots of web pages and verify their appearance using LLMs. The following tools are available:
-
-1. Screenshot Capture:
-```bash
-venv/bin/python tools/screenshot_utils.py URL [--output OUTPUT] [--width WIDTH] [--height HEIGHT]
-```
-
-2. LLM Verification with Images:
-```bash
-venv/bin/python tools/llm_api.py --prompt "Your verification question" --provider {openai|anthropic} --image path/to/screenshot.png
-```
-
-Example workflow:
-```python
-from screenshot_utils import take_screenshot_sync
-from llm_api import query_llm
-
-# Take a screenshot
-screenshot_path = take_screenshot_sync('https://example.com', 'screenshot.png')
-
-# Verify with LLM
-response = query_llm(
-    "What is the background color and title of this webpage?",
-    provider="openai",  # or "anthropic"
-    image_path=screenshot_path
-)
-print(response)
-```
 
 ## LLM
 
@@ -135,100 +105,22 @@ Key Features:
 - Full UTF-8 encoding support
 - CSV data import/export capabilities
 
-## YouTube Tool
-
-You can use the `tools/youtube_tool.py` file to process YouTube video transcripts and content analysis. Main features include:
-
-1. Extract video transcript:
-```bash
-venv/bin/python tools/youtube_tool.py "https://www.youtube.com/watch?v=VIDEO_ID" --output "projects/your_project/data/transcript.txt"
-```
-
-2. Generate content summary:
-```bash
-venv/bin/python tools/youtube_tool.py "https://www.youtube.com/watch?v=VIDEO_ID" --summarize --output "projects/your_project/data/summary.txt"
-```
-
-Key Features:
-- Support for multiple YouTube URL formats
-- Automatic transcript extraction and formatting
-- Content summarization using LLM
-- Comprehensive error handling and logging
-- Full UTF-8 encoding support
-
-## Calendar Tool
-
-You can use the `tools/calendar_tool.py` file to create system calendar events. Main features include:
-
-1. Create a new calendar event:
-```bash
-venv/bin/python tools/calendar_tool.py \
-  --title "Meeting with Team" \
-  --start "2024-03-20T14:00:00" \
-  --end "2024-03-20T15:00:00" \
-  --description "Weekly team sync" \
-  --location "Conference Room A"
-```
-
-2. List available calendars:
-```bash
-venv/bin/python tools/calendar_tool.py --list-calendars
-```
-
-Key Features:
-- Integration with system Calendar app
-- Support for multiple calendars
-- Flexible datetime format support
-- Comprehensive error handling and logging
-- Full UTF-8 encoding support for international text
-
 # Lessons
 
 ## User Specified Lessons
+
 - You have a python venv in ./venv.
 - Include info useful for debugging in the program output.
 - Read the file before you try to edit it.
 - Use LLM to perform flexible text understanding tasks. First test on a few files. After success, make it parallel.
-- When adding new tools, update the .cursorrules file accordingly.
-- keep the .cursorrules file in English only.
-- For video summary tasks, follow the standard workflow in video_summary_workflow.md:
-  1. Create proper project structure with data directory
-  2. Extract transcript and generate initial summary using youtube_tool.py
-  3. Organize content in a structured format:
-     - Basic information (type, context, participants, time/location)
-     - Content analysis (core topics, categorized content, key points)
-     - Supplementary information
-  4. Follow markdown formatting standards for consistency
-  5. Use quality checklist to ensure completeness
-  6. Keep both raw data and processed summaries for reference
+- When adding new tools, update the .trearules file accordingly and keep it in English only.
 
-## Cursor learned
+## Trea learned
+
 - For website image paths, always use the correct relative path (e.g., 'images/filename.png') and ensure the images directory exists
 - For search results, ensure proper handling of different character encodings (UTF-8) for international queries
 - Add debug information to stderr while keeping the main output clean in stdout for better pipeline integration
 - When using seaborn styles in matplotlib, use 'seaborn-v0_8' instead of 'seaborn' as the style name due to recent seaborn version changes
 - When exporting data, avoid mixing different output formats (e.g., JSON and CSV) in the same operation to prevent confusion
-- When processing video content, preserve original metadata (title, duration, channel, etc) and raw transcript alongside the summary to allow users to analyze from different perspectives
-- When summarizing search results, always cite sources with markdown links (e.g., `[Official Website](https://example.com)`) to maintain document formatting consistency while providing verifiable references
-
-## Font Settings for Data Visualization
-- Use LXGW WenKai Mono for CJK characters in matplotlib/seaborn plots
-- Set fonts globally before creating plots:
-  ```python
-  plt.rcParams['font.sans-serif'] = ['LXGW WenKai Mono']
-  mpl.rcParams['font.family'] = 'LXGW WenKai Mono'
-  ```
-- For seaborn heatmaps, set fonts via ax object instead of plt
-- Provide fallback fonts: Microsoft YaHei, SimHei, PingFang SC
-- Use tight_layout() and bbox_inches='tight' to prevent text cutoff
-- Set dpi=300 for high-quality output
-
-## Calendar Tool Lessons
-- Default calendar should be "Home" instead of "Calendar" on macOS
-- Always add error handling in AppleScript with try/on error blocks
-- Check calendar existence before creating events
-- Add detailed debug information for troubleshooting
-- Handle special characters and quotes in calendar names properly
-- Return meaningful error messages in the user's language
 
 # Scratchpad
