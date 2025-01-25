@@ -1,0 +1,50 @@
+
+=== Result 1 ===
+URL: https://api-docs.deepseek.com/quick_start/pricing/
+Title: Models & Pricing | DeepSeek API Docs
+Snippet: OUTPUT PRICE; deepseek-chat: 64K-8K: ¥0.5 (5) ¥0.1: ¥2 (5) ¥1: ¥8 (5) ¥2: deepseek-reasoner: 64K: 32K: 8K: ¥1: ¥4: ¥16 (6) (1) The deepseek-chat model has been upgraded to DeepSeek-V3. deepseek-reasoner points to the new model DeepSeek-R1. (2) CoT (Chain of Thought) is the reasoning content deepseek-reasoner gives before output the ...
+
+=== Result 2 ===
+URL: https://artificialanalysis.ai/models/deepseek-v3
+Title: DeepSeek V3: Quality, Performance & Price Analysis
+Snippet: Analysis of DeepSeek's DeepSeek V3 and comparison to other AI models across key metrics including quality, price, performance (tokens per second & time to first token), context window & more. ... DeepSeek V3 Input token price: $0.90, Output token price: $1.10 per 1M Tokens.
+
+=== Result 3 ===
+URL: https://www.zdnet.com/article/deepseeks-new-open-source-ai-model-can-outperform-o1-for-a-fraction-of-the-cost/
+Title: DeepSeek's new open-source AI model can outperform o1 for a ... - ZDNET
+Snippet: DeepSeek's new open-source AI model can outperform o1 for a fraction of the cost Written by Radhika Rajkumar, Editor Jan. 21, 2025 at 9:05 a.m. PT Reviewed by Elyse Betters Picaro
+
+=== Result 4 ===
+URL: https://www.interconnects.ai/p/deepseek-v3-and-the-actual-cost-of
+Title: DeepSeek V3 and the cost of frontier AI models
+Snippet: The price of progress in AI is far closer to this, ... This is a very large technical team.With headcount costs that can also easily be over $10M per year, estimating the cost of a year of operations for DeepSeek AI would be closer to $500M (or even $1B+) than any of the $5.5M numbers tossed around for this model. ...
+
+=== Result 5 ===
+URL: https://www.gadgets360.com/ai/news/deepseek-r1-reasoning-ai-model-launch-outperforms-openai-o1-7531427
+Title: DeepSeek Says Its New Reasoning-Focused DeepSeek-R1 AI Model Can ...
+Snippet: DeepSeek-R1 AI Models Cost Up to 95 Percent Less than OpenAI's o1. ... Currently, the DeepSeek-R1 API comes with an input price of $0.14 (roughly Rs. 12.10) per million tokens and the output price is set at $2.19 (roughly Rs. 189.50) per million tokens. In comparison, OpenAI's o1 API costs $7.5 (roughly Rs. 649) per million input tokens and $60 ...
+
+=== Result 6 ===
+URL: https://www.deepseek.com/
+Title: DeepSeek
+Snippet: Chat on the go with DeepSeek-V3 Your free all-in-one AI tool. ... Benchmark (Metric) DeepSeek V3 DeepSeek V2.5 Qwen2.5 Llama3.1 Claude-3.5 GPT-4o ; 0905 72B-Inst 405B-Inst Sonnet-1022 0513; Architecture: MoE: MoE: ... DeepSeek App DeepSeek Chat DeepSeek Platform API Pricing Service Status. Legal & Safety.
+
+=== Result 7 ===
+URL: https://venturebeat.com/ai/open-source-deepseek-r1-uses-pure-reinforcement-learning-to-match-openai-o1-at-95-less-cost/
+Title: Open-source DeepSeek-R1 uses pure reinforcement learning to match ...
+Snippet: Chinese AI startup DeepSeek, ... It does this at a much more tempting cost, proving to be 90-95% more affordable than the latter. The release marks a major leap forward in the open-source arena ...
+
+=== Result 8 ===
+URL: https://www.analyticsvidhya.com/blog/2024/12/gpt-4o-vs-deepseek-v3/
+Title: DeepSeek V3 vs GPT-4o: Which is Better? - Analytics Vidhya
+Snippet: In a year marked by OpenAI's notable releases like GPT-4o, Sora, and o1, the open-source community has been steadily advancing with its own impressive models.Among them is DeepSeek V3, an open-source model developed on a budget of just $5.5M—significantly lower than GPT-4o's ($100M+) training cost.With 685 billion parameters and a Mixture-of-Experts (MoE) architecture, DeepSeek V3 ...
+
+=== Result 9 ===
+URL: https://api-docs.deepseek.com/
+Title: Your First API Call | DeepSeek API Docs
+Snippet: The DeepSeek API uses an API format compatible with OpenAI. By modifying the configuration, you can use the OpenAI SDK or softwares compatible with the OpenAI API to access the DeepSeek API. ... 中文（中国） DeepSeek Platform. Quick Start. Your First API Call; Models & Pricing; The Temperature Parameter; Token & Token Usage; Rate Limit ...
+
+=== Result 10 ===
+URL: https://techcrunch.com/2024/12/26/deepseeks-new-ai-model-appears-to-be-one-of-the-best-open-challengers-yet/
+Title: DeepSeek's new AI model appears to be one of the best 'open ...
+Snippet: The company also claims it only spent $5.5 million to train DeepSeek V3, a fraction of the development cost of models like OpenAI's GPT-4. The downside is that the model's political views are ...

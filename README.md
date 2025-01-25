@@ -36,13 +36,105 @@ Devin impressed many by acting like an intern who writes its own plan, updates t
 	
 ## Usage
 
-1.	Copy this repository’s contents into your Cursor or Windsurf project.
-2.	For Cursor, .cursorrules is automatically loaded. For Windsurf, add .windsurfrules plus the Scratchpad for updates.
-3.	Adjust .env with your own API keys, run pip install -r requirements.txt, and you’re all set.
-4.	Start exploring advanced tasks—such as data gathering, building quick prototypes, or cross-referencing external resources—in a fully agentic manner.
+1. Copy all files from this repository to your project folder
+2. For Cursor users: The `.cursorrules` file will be automatically loaded
+3. For Windsurf users: Use both `.windsurfrules` and `scratchpad.md` for similar functionality
 
-## Want the Details?
+## Setup
 
-Check out our [blog post](https://yage.ai/cursor-to-devin-en.html) on how we turned $20 into $500-level AI capabilities in just one hour. It explains the philosophy behind process planning, self-evolution, and fully automated workflows. You’ll also find side-by-side comparisons of Devin, Cursor, and Windsurf, plus a step-by-step tutorial on setting this all up from scratch.
+1. Create Python virtual environment:
+```bash
+# Create a virtual environment in ./venv
+python3 -m venv venv
 
-License: MIT
+# Activate the virtual environment
+# On Unix/macOS:
+source venv/bin/activate
+# On Windows:
+.\venv\Scripts\activate
+```
+
+2. Configure environment variables:
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env with your API keys and configurations
+```
+
+3. Install dependencies:
+```bash
+# Install required packages
+pip install -r requirements.txt
+
+# Install Playwright's Chromium browser (required for web scraping)
+python -m playwright install chromium
+```
+
+## Tools Included
+
+### LLM Integration
+- Multi-provider support (OpenAI, Anthropic, Deepseek, Google, Azure)
+- Local LLM deployment options
+- Flexible API configuration
+- Comprehensive error handling
+
+### Web Tools
+- Advanced web scraping with JavaScript support (using Playwright)
+- Concurrent webpage processing
+- Search engine integration with dual providers:
+  - Serper API (Google search results)
+  - DuckDuckGo (fallback)
+- Intelligent content extraction and formatting
+
+### Data Management
+- SQLite database operations
+  - Query execution with parameterization
+  - SQL script execution
+  - CSV import/export capabilities
+  - Transaction support
+- Automatic schema generation
+- Data validation and error handling
+
+### Content Analysis
+- YouTube video processing
+  - Transcript extraction
+  - Content summarization
+  - Multiple URL format support
+  - Multilingual capabilities
+
+### System Integration
+- Calendar management (macOS)
+  - Event creation and scheduling
+  - Multiple calendar support
+  - Flexible time format handling
+- File system operations
+- Process handling
+
+## Testing
+
+The project includes comprehensive unit tests for all tools. To run the tests:
+
+```bash
+# Make sure you're in the virtual environment
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+
+# Run all tests
+PYTHONPATH=. python -m unittest discover tests/
+```
+
+The test suite includes:
+- Search engine tests (DuckDuckGo and Serper API integration)
+- Web scraper tests (Playwright-based scraping)
+- LLM API tests (Multiple provider integration)
+- SQLite operations tests
+- YouTube content analysis tests
+- Calendar integration tests
+
+## Background
+
+For detailed information about the motivation and technical details behind this project, check out the blog post: [Turning $20 into $500 - Transforming Cursor into Devin in One Hour](https://yage.ai/cursor-to-devin-en.html)
+
+## License
+
+MIT License
