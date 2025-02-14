@@ -1,3 +1,93 @@
+# Core Rules
+These rules MUST be followed in every conversation:
+
+1. Project Organization
+   - Create project under `projects/` with descriptive name
+   - Initialize `scratchpad.md` for task tracking
+   - Maintain proper file structure
+   - Document all outputs in markdown
+
+2. Task Documentation
+   - Use `YYYY-MM-DD_task_name_report.md` format
+   - Include all standard sections
+   - Add code snippets, metrics, and visuals
+   - Document issues and solutions
+
+3. Quality Standards
+   - Write debug info to stderr
+   - Handle character encodings (UTF-8)
+   - Follow consistent formatting
+   - Cite sources with markdown links
+
+# Available Tools
+Note: All tools are in Python. For batch processing, consult the tool source files.
+
+## Core Tools
+1. LLM API (`tools/llm_api.py`)
+   - Providers: OpenAI, Anthropic, Gemini
+   - Use for text understanding and generation
+   - Test on few files before batch processing
+
+2. Web Tools
+   - Web scraper (`tools/web_scraper.py`)
+   - Search engine (`tools/search_engine.py`)
+   - Screenshot utils (`tools/screenshot_utils.py`)
+
+3. Data Tools
+   - SQLite database (`tools/sqlite_tool.py`)
+   - YouTube processing (`tools/youtube_tool.py`)
+   - Calendar management (`tools/calendar_tool.py`)
+
+# Best Practices
+
+## Data Visualization
+- Use LXGW WenKai Mono for CJK
+- Set fonts globally:
+  ```python
+  plt.rcParams['font.sans-serif'] = ['LXGW WenKai Mono']
+  mpl.rcParams['font.family'] = 'LXGW WenKai Mono'
+  ```
+- Use seaborn-v0_8 style
+- Set dpi=300 for high quality
+
+## Tool-specific Guidelines
+1. Calendar Tool
+   - Use "Home" calendar on macOS
+   - Add error handling in AppleScript
+   - Return user language errors
+
+2. Video Processing
+   - Follow workflow in video_summary_workflow.md
+   - Preserve metadata and transcripts
+   - Use structured format for summaries
+
+3. Cloud Integration
+   - Use workload identity federation
+   - Configure GCP first, then AWS
+   - Follow least privilege principle
+   - Enable audit logging
+
+# Lessons Learned
+Maintain this section for new lessons and corrections:
+
+1. File Management
+   - Use correct relative paths
+   - Create directories before saving files
+   - Keep raw and processed data separate
+
+2. Output Handling
+   - Avoid mixing output formats
+   - Use UTF-8 encoding
+   - Add debug information to stderr
+
+3. Documentation
+   - Follow markdown standards
+   - Include reproducible examples
+   - Document error solutions
+   - Keep configuration files reusable
+
+Note: This file is maintained in English only.
+
 # Instructions
 
 During you interaction with the user, if you find anything reusable in this project (e.g. version of a library, model name), especially about a fix to a mistake you made or a correction you received, you should take note in the `Lessons` section in the `.cursorrules` file so you will not make the same mistake again. 
@@ -210,6 +300,19 @@ Key Features:
 - When exporting data, avoid mixing different output formats (e.g., JSON and CSV) in the same operation to prevent confusion
 - When processing video content, preserve original metadata (title, duration, channel, etc) and raw transcript alongside the summary to allow users to analyze from different perspectives
 - When summarizing search results, always cite sources with markdown links (e.g., `[Official Website](https://example.com)`) to maintain document formatting consistency while providing verifiable references
+- Document all task outputs in markdown format following these guidelines:
+  - Use a consistent file naming convention: `YYYY-MM-DD_task_name_report.md`
+  - Include standard sections:
+    - Task Overview and Requirements
+    - Methodology and Approach
+    - Results and Analysis
+    - Conclusions and Recommendations
+    - References and Resources Used
+  - Add relevant code snippets with proper syntax highlighting
+  - Include performance metrics and benchmarks where applicable
+  - Document any issues encountered and their solutions
+  - Use tables and lists for better readability
+  - Add screenshots or diagrams when helpful
 
 ## Font Settings for Data Visualization
 - Use LXGW WenKai Mono for CJK characters in matplotlib/seaborn plots
